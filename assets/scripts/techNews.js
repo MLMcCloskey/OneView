@@ -4,9 +4,9 @@
 // var pv= ["[[PromiseValue]]"];
 
 var url = 'https://newsapi.org/v2/top-headlines?' +
-          'country=us&' +
+        //   'country=us&' +
         //   'category=technology&'+
-        //   'sources=techcrunch&' +
+          'sources=techcrunch&' +
           'apiKey=7d26503d0dd74f109690214b2cca28aa';
 
 
@@ -18,10 +18,10 @@ fetch(req)
 
 $.get(url, function(data){
     console.log(data)
-    $("body").html("<div id='news'><ul id='newsLinks'></ul></div>")
+    $("body").prepend("<div id='news'><ul id='techNewsLinks'></ul></div>")
     for (i=0; i<5; i++){
-        var link = $('<a>').attr('href', data.articles[i].url ).text(data.articles[i].title);
+        var link = $('<a>').attr('href', data.articles[i].url ).text(data.articles[i].title)
 
-        $("#newsLinks").prepend('<hr>').prepend(link);
+        $("#techNewsLinks").prepend('<hr>').prepend(link);
     }
 });

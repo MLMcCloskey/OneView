@@ -18,10 +18,10 @@ fetch(req)
 
 $.get(url, function(data){
     console.log(data)
-    $("body").html("<div id='news'><ul id='newsLinks'></ul></div>")
+    $("body").prepend("<div id='news'><ul id='usNewsLinks'></ul></div>")
     for (i=0; i<5; i++){
-        var link = $('<a>').attr('href', data.articles[i].url ).text(data.articles[i].title);
+        var link = $('<a>').attr('href', data.articles[i].url ).text(data.articles[i].title)
 
-        $("#newsLinks").prepend('<hr>').prepend(link);
+        $("#usNewsLinks").prepend('<hr>').prepend(link);
     }
 });
