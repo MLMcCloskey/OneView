@@ -1,0 +1,57 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+    <head>
+        <title>Get web visitor's location</title>
+        <meta name="robots" value="none" />
+    </head>
+    <body>
+    <div id="yourinfo"></div>
+    <script type="text/javascript" src="http://www.google.com/jsapi?key=AIzaSyAqfUT_3oTHfrZMyAFkChTGhTP0CQZ54jY"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.5.1/jquery.min.js"></script>
+    
+    <script type="text/javascript">
+        if (google.loader.ClientLocation)
+        {
+            visitor_lat = google.loader.ClientLocation.latitude;
+            visitor_lon = google.loader.ClientLocation.longitude;
+            visitor_city = google.loader.ClientLocation.address.city;
+            visitor_region = google.loader.ClientLocation.address.region;
+            visitor_country = google.loader.ClientLocation.address.country;
+            visitor_countrycode = google.loader.ClientLocation.address.country_code;
+            $('#yourinfo').html('<p>Lat/Lon: ' + visitor_lat + ' / ' + visitor_lon + '</p><p>Location: ' + visitor_city + ', ' + visitor_region + ', ' + visitor_country + ' (' + visitor_countrycode + ')</p>');
+    $.ajax({
+      url: "http://api.wunderground.com/api/2c13cbda3d02efb1/forecast/geolookup/conditions/q/"+ visitor_lat +","+ visitor_lon +".json",
+      dataType: "jsonp",
+      success: function (parsed_json) {
+        console.log("this is working");
+        var location = parsed_json['location']['city'];
+        var temp_f = parsed_json['current_observation']['temp_f'];
+        var wnd_speed = parsed_json['current_observation']['wind_mph'];
+        var wthr = parsed_json['current_observation']['weather'];
+        var f_like = parsed_json['current_observation']['feelslike_f'];
+        var rel_hum = parsed_json['current_observation']['relative_humidity'];
+        var loc_html = ("Weather for current location :" + location);
+        var temp_html = ("Current temperature is: " + temp_f + " F");
+        var f_like_html = ("it feels like: " + f_like + " F");
+        var wthr_html= ("Weather is: " + wthr);
+        var wnd_html = ("Wind Speed is: " + wnd_speed + " mph");
+        var rel_hum_html = ("Relative humidity is: " + rel_hum);
+        console.log(rel_hum);
+        $("#loc_disp").append(loc_html).css("font-size", "30px");
+        $("#temp_disp").append(temp_html).css("font-size", "22px");
+        $("#f_like_disp").append(f_like_html).css("font-size", "22px");
+        $("#wthr_disp").append(wthr_html).css("font-size", "22px");
+        $("#wnd_disp").append(wnd_html).css("font-size", "22px");
+        $("#rel_hum_disp").append(rel_hum_html).css("font-size", "22px");
+      }
+      });
+   
+        }
+        else
+        {
+            document.getElementById('yourinfo').innerHTML = '<p>Whoops!</p>';
+        }
+    </script>
+    </body>
+</html>
