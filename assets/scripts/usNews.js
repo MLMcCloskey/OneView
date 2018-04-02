@@ -28,5 +28,5 @@ $("#homeButtons").on("click", "#usBtn", function(){
             $("#homeButtons").prepend('<hr>').prepend(link);
         }
     });
-    $("#homeButtons").append('<button type="button" class="btn btn-warning" id="homeBtn">HOME</button>')
+    $("#homeButtons").append(homeBtn)
 });

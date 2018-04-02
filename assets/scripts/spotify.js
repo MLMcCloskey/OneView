@@ -1,6 +1,17 @@
 // Web API Base URL: https://api.spotify.com
 // Client ID 46216538f88645839c48d5ef7e413565
 // Client Secret 0e9545eb55064e84b25452a1a760f744
+
+  /* Load the HTTP library */
+//   var http = require("http");
+
+//   /* Create an HTTP server to handle responses */
+
+//   http.createServer(function(request, response) {
+//     response.writeHead(200, {"Content-Type": "text/plain"});
+//     response.write("Hello World");
+//     response.end();
+//   }).listen(8888);
 //
 // Authorization url = GET https://accounts.spotify.com/authorize/?client_id=46216538f88645839c48d5ef7e413565&response_type=code
 
@@ -39,3 +50,24 @@
 //     url: queryURL,
 //     method: "GET"
 // })
+
+
+
+
+$("#homeButtons").on("click", "#musicBtn", function(){
+    $("#homeButtons").empty();
+    $("#homeButtons").prepend(homeBtn);
+    $("#homeButtons").append('<button type="button" class="btn btn-success" id="jazzBtn">JAZZ</button> <br> <button type="button" class="btn btn-primary" id="electronicBtn">ELECTRONIC</button> <br> <button type="button" class="btn btn-danger" id="rockBtn">ROCK</button>')
+});
+
+$("#homeButtons").on("click", "#jazzBtn", function(){
+    $("#homeButtons").empty();
+    $("#homeButtons").prepend(homeBtn);
+    $("#homeButtons").append('<button type="button" class="btn btn-success" id="swingJazz">SWING</button> <br> <button type="button" class="btn btn-primary" id="coolJazz">COOL</button> <br> <button type="button" class="btn btn-danger" id="bebopBtn">BEBOP</button>')
+});
+
+$("#homeButtons").on("click", "#electronicBtn", function(){
+    $("#homeButtons").empty();
+    $("#homeButtons").prepend(homeBtn);
+    $("#homeButtons").append('<button type="button" class="btn btn-success" id="electroswing">ELECTROSWING</button> <br> <button type="button" class="btn btn-primary" id="downtempo">DOWNTEMPO</button> <br> <button type="button" class="btn btn-danger" id="houseBtn">HOUSE</button>')
+})
