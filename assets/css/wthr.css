@@ -1,0 +1,44 @@
+
+#GetWeather {
+border-radius: 4px;
+background-color: #0000ff;
+border: none;
+color: #FFFFFF;
+text-align: center;
+font-size: 30px;
+padding: 20px;
+width: 200px;
+cursor: pointer;
+margin: 5px auto;
+}
+
+#GetWeather span {
+cursor: pointer;
+display: inline-block;
+position: relative;
+transition: 0.5s;
+}
+
+#GetWeather span:after {
+content: '\00bb';
+position: absolute;
+opacity: 0;
+top: 0;
+right: -20px;
+transition: 0.5s;
+}
+
+#GetLoc {
+border-radius: 4px;
+background-color: gray;
+border: none;
+color: white;
+text-align: center;
+font-size: 30px;
+padding: 20px;
+width: 400px;
+margin: 5px auto;
+display: inline-block;
+opacity: 0;
+}
+tr:hover {background-color:#00bfff;}

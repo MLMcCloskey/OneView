@@ -9,9 +9,28 @@
     <script type="text/javascript" src="http://www.google.com/jsapi?key=AIzaSyAqfUT_3oTHfrZMyAFkChTGhTP0CQZ54jY"></script>
       <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
   <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.5.1/jquery.min.js"></script>
-    
-    <script type="text/javascript">
-        if (google.loader.ClientLocation)
+
+  <div class="container">
+      <!-- Define table for adding weather data -->
+    <h2>3 day weather forecast</h2>
+    <p>The .table class adds basic styling (light padding and only horizontal dividers) to a table:</p>
+    <table class="table">
+      <thead>
+        <tr>
+          <th>Temperature</th>
+          <th>Feelslike</th>
+          <th>Relative Humidity</th>
+          <th>Weather</th>
+          <th>Wind Speed</th>
+        </tr>
+      </thead>
+      <tbody>
+        <!-- Insert movie rows here -->
+      </tbody>
+    </table>
+  </div>
+  <script>
+       if (google.loader.ClientLocation)
         {
             visitor_lat = google.loader.ClientLocation.latitude;
             visitor_lon = google.loader.ClientLocation.longitude;
@@ -20,8 +39,71 @@
             visitor_country = google.loader.ClientLocation.address.country;
             visitor_countrycode = google.loader.ClientLocation.address.country_code;
             $('#yourinfo').html('<p>Lat/Lon: ' + visitor_lat + ' / ' + visitor_lon + '</p><p>Location: ' + visitor_city + ', ' + visitor_region + ', ' + visitor_country + ' (' + visitor_countrycode + ')</p>');
+    // The below code fills in the first row of the table
+    var queryURL = "https://www.omdbapi.com/?t=" + movie + "&y=&plot=short&apikey=trilogy";
+
     $.ajax({
-      url: "http://api.wunderground.com/api/2c13cbda3d02efb1/forecast/geolookup/conditions/q/"+ visitor_lat +","+ visitor_lon +".json",
+      url: queryURL,
+      method: "GET"
+    }).then(function(response) {
+      // Get reference to existing tbody element, create a new table row element
+      var tBody = $("tbody");
+      var tRow = $("<tr>");
+
+      // Methods run on jQuery selectors return the selector they we run on
+      // This is why we can create and save a reference to a td in the same statement we update its text
+      var titleTd = $("<td>").text(response.Title);
+      var yearTd = $("<td>").text(response.Year);
+      var actorsTd = $("<td>").text(response.Actors);
+      // Append the newly created table data to the table row
+      tRow.append(titleTd, yearTd, actorsTd);
+      // Append the table row to the table body
+      tBody.append(tRow);
+    });
+
+    var movie = "The Little Mermaid";
+    var queryURL = "https://www.omdbapi.com/?t=" + movie + "&y=&plot=short&apikey=trilogy";
+
+    $.ajax({
+      url: queryURL,
+      method: "GET"
+    }).then(function(response) {
+      var tBody = $("tbody");
+      var tRow = $("<tr>");
+      // Methods run on jQuery selectors return the selector they we run on
+      // This is why we can create and save a reference to a td in the same statement we update its text
+      var titleTd = $("<td>").text(response.Title);
+      var yearTd = $("<td>").text(response.Year);
+      var actorsTd = $("<td>").text(response.Actors);
+      // Append the newly created table data to the table row
+      tRow.append(titleTd, yearTd, actorsTd);
+      // Append the table row to the table body
+      tBody.append(tRow);
+    });
+
+    var movie = "The Lion King";
+    var queryURL = "https://www.omdbapi.com/?t=" + movie + "&y=&plot=short&apikey=trilogy";
+
+    $.ajax({
+      url: queryURL,
+      method: "GET"
+    }).then(function(response) {
+      var tBody = $("tbody");
+      var tRow = $("<tr>");
+      // Methods run on jQuery selectors return the selector they we run on
+      // This is why we can create and save a reference to a td in the same statement we update its text
+      var titleTd = $("<td>").text(response.Title);
+      var yearTd = $("<td>").text(response.Year);
+      var actorsTd = $("<td>").text(response.Actors);
+      // Append the newly created table data to the table row
+      tRow.append(titleTd, yearTd, actorsTd);
+      // Append the table row to the table body
+      tBody.append(tRow);
+    });
+
+       
+    $.ajax({
+      url: "http://api.wunderground.com/api/2c13cbda3d02efb1/forecast/geolookup/conditions/forecast/q/"+ visitor_lat +","+ visitor_lon +".json",
       dataType: "jsonp",
       success: function (parsed_json) {
         console.log("this is working");
@@ -38,7 +120,7 @@
         var wnd_html = ("Wind Speed is: " + wnd_speed + " mph");
         var rel_hum_html = ("Relative humidity is: " + rel_hum);
         console.log(rel_hum);
-        $("#loc_disp").append(loc_html).css("font-size", "30px");
+        $("#loc_disp").append(loc_html).css("font-size", "30px", "width", "100px");
         $("#temp_disp").append(temp_html).css("font-size", "22px");
         $("#f_like_disp").append(f_like_html).css("font-size", "22px");
         $("#wthr_disp").append(wthr_html).css("font-size", "22px");
