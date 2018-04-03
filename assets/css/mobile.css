@@ -6,7 +6,10 @@ button {
     width: 240px;
     height: 80px;
     margin: 25px auto 0;
-    padding: 40px;
+}
+
+.btn {
+    font-size: 1.75em;
 }
 
 #weatherBtn {
