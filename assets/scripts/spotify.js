@@ -70,4 +70,18 @@ $("#homeButtons").on("click", "#electronicBtn", function(){
     $("#homeButtons").empty();
     $("#homeButtons").prepend(homeBtn);
     $("#homeButtons").append('<button type="button" class="btn btn-success" id="electroswing">ELECTROSWING</button> <br> <button type="button" class="btn btn-primary" id="downtempo">DOWNTEMPO</button> <br> <button type="button" class="btn btn-danger" id="houseBtn">HOUSE</button>')
-})
+});
+
+$("#homeButtons").on("click", "#rockBtn", function(){
+    $("#homeButtons").empty();
+    $("#homeButtons").prepend(homeBtn);
+    $("homeButtons").append('<button type="button" class="btn btn-success" id="indieBtn">INDIE</button> <br> <button type="button" class="btn btn-primary" id="bluesBtn">BLUES</button> <br> <button type="button" class="btn btn-danger" id="punkBtn">PUNK</button>')
+});
+
+
+
+$("#homeButtons").on("click", "#coolJazz", function(){
+    $("#homeButtons").empty();
+    $("#homeButtons").prepend(homeBtn + "<br>");
+    $("#homeButtons").append('<iframe src="https://open.spotify.com/embed/user/spotify/playlist/37i9dQZF1DWWQp0YMTvpD3" width="300" height="380" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>');
+});
