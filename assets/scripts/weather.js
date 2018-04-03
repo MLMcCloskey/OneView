@@ -1,20 +1,38 @@
 
 $(document).ready(function() {
   //enable GetWeather button if disabled//
-  $("#GetWeather").attr("enabled", true);
-  //location tracking for local weather//
-  if (google.loader.ClientLocation)
-  {
-    Geo_lat = google.loader.ClientLocation.latitude;
-    Geo_lon = google.loader.ClientLocation.longitude;
-    //   //onclick run getData function to make AJAX WeatherAPI calls//
-    $("#GetWeather").on("click", getData)
+  var Geo={};
+    if (navigator.geolocation) {
+      navigator.geolocation.getCurrentPosition(success,error);
+    }
+    else {
+      alert('Geolocation is not available');
+    }
 
-  }
-  else {
-    alert('Geolocation is not available');
-  }
-  console.log(Geo_lat,Geo_lon);
+    function error() {
+      alert("Sorry you couldn't be located");
+    }
+
+    function success(position){
+      Geo_lat = position.coords.latitude;
+      Geo_lon = position.coords.longitude;
+      console.log(Geo_lat,Geo_lon);
+      $("#GetWeather").on("click", getData)
+
+  // $("#GetWeather").attr("enabled", true);
+  // //location tracking for local weather//
+  // if (google.loader.ClientLocation)
+  // {
+  //   Geo_lat = google.loader.ClientLocation.latitude;
+  //   Geo_lon = google.loader.ClientLocation.longitude;
+  //   //   //onclick run getData function to make AJAX WeatherAPI calls//
+  //   $("#GetWeather").on("click", getData)
+
+  // }
+  // else {
+  //   alert('Geolocation is not available');
+  // }
+  
   // Run getData function to make ajax call
   function getData() {
     $("#GetWeather").attr("disabled", true);
@@ -58,4 +76,5 @@ $(document).ready(function() {
       }
     });
   }
+}
 });
