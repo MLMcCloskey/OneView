@@ -127,19 +127,19 @@ $("#homeButtons").on("click", "#houseBtn", function(){
 $("#homeButtons").on("click", "#indieBtn", function(){
     $("#homeButtons").empty();
     $("#homeButtons").prepend(homeBtn + "<br>");
-    $("#homeButtons").append('');
+    $("#homeButtons").append('<iframe src="https://open.spotify.com/embed/user/spotify/playlist/37i9dQZF1DX2Nc3B70tvx0" width="300" height="380" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>');
 });
 
 $("#homeButtons").on("click", "#bluesBtn", function(){
     $("#homeButtons").empty();
     $("#homeButtons").prepend(homeBtn + "<br>");
-    $("#homeButtons").append('');
+    $("#homeButtons").append('<iframe src="https://open.spotify.com/embed/user/spotify/playlist/37i9dQZF1DXcnkReojaCnV" width="300" height="380" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>');
 });
 
 $("#homeButtons").on("click", "#punkBtn", function(){
     $("#homeButtons").empty();
     $("#homeButtons").prepend(homeBtn + "<br>");
-    $("#homeButtons").append('');
+    $("#homeButtons").append('<iframe src="https://open.spotify.com/embed/user/spotify/playlist/37i9dQZF1DX3LDIBRoaCDQ" width="300" height="380" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>');
 });
 
 // spotify:user:1166247682:playlist:32NRcLNr9FYhVxGFYwxHuE
