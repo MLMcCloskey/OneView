@@ -78,10 +78,68 @@ $("#homeButtons").on("click", "#rockBtn", function(){
     $("homeButtons").append('<button type="button" class="btn btn-success" id="indieBtn">INDIE</button> <br> <button type="button" class="btn btn-primary" id="bluesBtn">BLUES</button> <br> <button type="button" class="btn btn-danger" id="punkBtn">PUNK</button>')
 });
 
+//  begin code for individual playlists
 
+// jazz list
+
+
+$("#homeButtons").on("click", "#swingJazz", function(){
+    $("#homeButtons").empty();
+    $("#homeButtons").prepend(homeBtn + "<br>");
+    $("#homeButtons").append('');
+});
+
+$("#homeButtons").on("click", "#coolJazz", function(){
+    $("#homeButtons").empty();
+    $("#homeButtons").prepend(homeBtn + "<br>");
+    $("#homeButtons").append('');
+});
+
+$("#homeButtons").on("click", "#bebopBtn", function(){
+    $("#homeButtons").empty();
+    $("#homeButtons").prepend(homeBtn + "<br>");
+    $("#homeButtons").append('');
+});
+
+// electronic list
+
+$("#homeButtons").on("click", "#elctroswing", function(){
+    $("#homeButtons").empty();
+    $("#homeButtons").prepend(homeBtn + "<br>");
+    $("#homeButtons").append('');
+});
 
 $("#homeButtons").on("click", "#downtempo", function(){
     $("#homeButtons").empty();
     $("#homeButtons").prepend(homeBtn + "<br>");
-    $("#homeButtons").append('<iframe src="https://open.spotify.com/embed/user/spotify/playlist/37i9dQZF1DWWQp0YMTvpD3" width="300" height="380" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>');
+    $("#homeButtons").append('<iframe src="https://open.spotify.com/embed/user/1166247682/playlist/32NRcLNr9FYhVxGFYwxHuE" width="300" height="380" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>');
 });
+
+$("#homeButtons").on("click", "#houseBtn", function(){
+    $("#homeButtons").empty();
+    $("#homeButtons").prepend(homeBtn + "<br>");
+    $("#homeButtons").append('');
+});
+
+// Rock list
+
+
+$("#homeButtons").on("click", "#indieBtn", function(){
+    $("#homeButtons").empty();
+    $("#homeButtons").prepend(homeBtn + "<br>");
+    $("#homeButtons").append('');
+});
+
+$("#homeButtons").on("click", "#bluesBtn", function(){
+    $("#homeButtons").empty();
+    $("#homeButtons").prepend(homeBtn + "<br>");
+    $("#homeButtons").append('');
+});
+
+$("#homeButtons").on("click", "#punkBtn", function(){
+    $("#homeButtons").empty();
+    $("#homeButtons").prepend(homeBtn + "<br>");
+    $("#homeButtons").append('');
+});
+
+// spotify:user:1166247682:playlist:32NRcLNr9FYhVxGFYwxHuE

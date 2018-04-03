@@ -6,6 +6,8 @@
 $("#homeButtons").on("click", "#techBtn", function(){
 
     $("#homeButtons").empty();
+    $("#homeButtons").prepend(homeBtn);
+
     var techURL = 'https://newsapi.org/v2/top-headlines?' +
             //   'country=us&' +
             //   'category=technology&'+
@@ -22,13 +24,12 @@ $("#homeButtons").on("click", "#techBtn", function(){
 
     $.get(techURL, function(data){
         console.log(data)
-        $("#homeButtons").prepend("<ul id='techNewsLinks'></ul>");
+        $("#homeButtons").append("<ul id='techNewsLinks'></ul>");
         for (i=0; i<5; i++){
             var link = $('<a>').attr('href', data.articles[i].url ).text(data.articles[i].title)
 
-            $("#homeButtons").prepend('<hr>').prepend(link);
+            $("#homeButtons").append('<hr>').append(link);
         }
     });
-    $("#homeButtons").append(homeBtn)
 
 });

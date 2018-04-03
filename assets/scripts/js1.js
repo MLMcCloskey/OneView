@@ -10,5 +10,5 @@ $("#homeButtons").on("click", "#newsBtn", function(){
 
 $("#homeButtons").on("click", "#homeBtn", function(){
     $("#homeButtons").empty();
-    $("#homeButtons").append('<button type="button" class="btn btn-danger" id="calendarBtn">Calendar</button> <br> <button type="button" class="btn btn-warning" id="weatherBtn">Weather</button> <br> <button type="button" class="btn btn-primary" id="newsBtn">News</button> <br> <button type="button" class="btn btn-success" id="musicBtn">Music</button>');   
+    $("#homeButtons").append('<button type="button" class="btn btn-warning" id="weatherBtn">Weather</button> <br> <button type="button" class="btn btn-primary" id="newsBtn">News</button> <br> <button type="button" class="btn btn-danger" id="financeBtn">Finance</button> <br> <button type="button" class="btn btn-success" id="musicBtn">Music</button>');   
 });
