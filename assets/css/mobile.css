@@ -1,0 +1,17 @@
+body {
+    align-content: center;
+}
+
+button {
+    width: 240px;
+    height: 80px;
+    margin: 25px auto 0;
+}
+
+.btn {
+    font-size: 1.75em;
+}
+
+#weatherBtn {
+    color: white;
+}
