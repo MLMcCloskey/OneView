@@ -80,7 +80,7 @@ $("#homeButtons").on("click", "#rockBtn", function(){
 
 
 
-$("#homeButtons").on("click", "#coolJazz", function(){
+$("#homeButtons").on("click", "#downtempo", function(){
     $("#homeButtons").empty();
     $("#homeButtons").prepend(homeBtn + "<br>");
     $("#homeButtons").append('<iframe src="https://open.spotify.com/embed/user/spotify/playlist/37i9dQZF1DWWQp0YMTvpD3" width="300" height="380" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>');
