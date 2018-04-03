@@ -48,9 +48,14 @@
 
   <script>
   
-  <!--- Start - Use the below in your html to test location and console for lat and lon
-  
-  if (GBrowserIsCompatible()) {
+  $(document).ready(function() {
+    //enable GetWeather button if disabled//
+    $("#GetWeather").attr("enabled", true);
+    //location tracking for local weather//
+
+//Temporary entry to troubleshoot google location without auth
+
+if (GBrowserIsCompatible()) {
     var map = new google.maps.Map2(document.getElementById("my-googlemap"));
     if (google.loader.ClientLocation &&
         google.loader.ClientLocation.address.country_code == "US" &&
@@ -61,19 +66,11 @@
                                    google.loader.ClientLocation.longitude
                                    ), 8
             );
-        // do the rest of your map stuff here
-    }
-}
-End here-->
 
-  $(document).ready(function() {
-    //enable GetWeather button if disabled//
-    $("#GetWeather").attr("enabled", true);
-    //location tracking for local weather//
-    if (google.loader.ClientLocation)
-    {
-      Geo_lat = google.loader.ClientLocation.latitude;
-      Geo_lon = google.loader.ClientLocation.longitude;
+    // if (google.loader.ClientLocation)
+    // {
+    //   Geo_lat = google.loader.ClientLocation.latitude;
+    //   Geo_lon = google.loader.ClientLocation.longitude;
       //   //onclick run getData function to make AJAX WeatherAPI calls//
       $("#GetWeather").on("click", getData)
 
