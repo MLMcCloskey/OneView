@@ -3,8 +3,10 @@ body {
 }
 
 button {
-    width: 120px;
+    width: 160px;
+    height: 50px;
     margin: 25px auto 0;
+    padding: 40px;
 }
 
 #weatherBtn {
