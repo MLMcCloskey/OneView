@@ -89,7 +89,7 @@ $("#homeButtons").on("click", "#swingJazz", function(){
     $("#homeButtons").append('');
 });
 
-$("#homeButtons").on("click", "#downtempo", function(){
+$("#homeButtons").on("click", "#coolJazz", function(){
     $("#homeButtons").empty();
     $("#homeButtons").prepend(homeBtn + "<br>");
     $("#homeButtons").append('');
