@@ -1,0 +1,61 @@
+
+$(document).ready(function() {
+  //enable GetWeather button if disabled//
+  $("#GetWeather").attr("enabled", true);
+  //location tracking for local weather//
+  if (google.loader.ClientLocation)
+  {
+    Geo_lat = google.loader.ClientLocation.latitude;
+    Geo_lon = google.loader.ClientLocation.longitude;
+    //   //onclick run getData function to make AJAX WeatherAPI calls//
+    $("#GetWeather").on("click", getData)
+
+  }
+  else {
+    alert('Geolocation is not available');
+  }
+  console.log(Geo_lat,Geo_lon);
+  // Run getData function to make ajax call
+  function getData() {
+    $("#GetWeather").attr("disabled", true);
+    $.ajax({
+      url: "http://api.wunderground.com/api/2c13cbda3d02efb1/forecast7day/geolookup/conditions/q/"+ Geo_lat + "," + Geo_lon +".json",
+      dataType: "jsonp",
+      success: function (parsed_json) {
+        var location = parsed_json['current_observation']['observation_location']['city'];
+        var loc_html = ("Location:  " + location)
+        // Make location box visible
+        $("#GetLoc").append(loc_html).css("opacity", "1")
+        // Get current weather and 3 day weather forecast
+        for (i=0; i<=3; i++) {
+          var fcast_day = parsed_json['forecast']['simpleforecast']['forecastday'][i]['date']['weekday_short'];
+          var fcast_hi = parsed_json['forecast']['simpleforecast']['forecastday'][i]['high']['fahrenheit'];
+          var fcast_con = parsed_json['forecast']['simpleforecast']['forecastday'][i]['conditions'];
+          var fcast_wnd = parsed_json['forecast']['simpleforecast']['forecastday'][i]['avewind']['mph'];
+          var fcast_hum = parsed_json['forecast']['simpleforecast']['forecastday'][i]['avehumidity'];
+          console.log(fcast_day,fcast_hi,fcast_con,fcast_wnd,fcast_hum);
+          // Get reference to existing tbody element, create a new table row element
+          var tBody = $("tbody");
+          var tRow = $("<tr>");
+          // Methods run on jQuery selectors return the selector they we run on
+          // This is why we can create and save a reference to a td in the same statement we update its text
+          var fcast_dayTd = $("<td>").text(fcast_day);
+          var fcast_hiTd = $("<td>").text(fcast_hi +"°F");
+          var fcast_conTd = $("<td>").text(fcast_con);
+          var fcast_wndTd = $("<td>").text(fcast_wnd +" mph");
+          var fcast_humTd = $("<td>").text(fcast_hum +"%");
+          // Append the newly created table data to the table row
+          tRow.append(fcast_dayTd, fcast_hiTd, fcast_conTd, fcast_wndTd, fcast_humTd);
+          // Append the table row to the table body
+          tBody.append(tRow);
+          $("#table td:nth-child(5)").each(function () {
+        if (parseInt($(this).text()) > 50) {
+            $(this).parent("tr").css("background-color", "yellow");
+        }
+    });
+        }
+
+      }
+    });
+  }
+});

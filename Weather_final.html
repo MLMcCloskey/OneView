@@ -47,6 +47,24 @@
   </div>
 
   <script>
+  
+  <!--- Start - Use the below in your html to test location and console for lat and lon
+  
+  if (GBrowserIsCompatible()) {
+    var map = new google.maps.Map2(document.getElementById("my-googlemap"));
+    if (google.loader.ClientLocation &&
+        google.loader.ClientLocation.address.country_code == "US" &&
+        google.loader.ClientLocation.address.region) {
+        // geo locate was successful and user is in the states
+        map.setCenter(
+            new google.maps.LatLng(google.loader.ClientLocation.latitude,
+                                   google.loader.ClientLocation.longitude
+                                   ), 8
+            );
+        // do the rest of your map stuff here
+    }
+}
+End here-->
 
   $(document).ready(function() {
     //enable GetWeather button if disabled//
