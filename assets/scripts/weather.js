@@ -75,15 +75,15 @@ $(document).ready(function() {
           tRow.append(fcast_dayTd, fcast_hiTd, fcast_conTd, fcast_wndTd, fcast_humTd);
           // Append the table row to the table body
           tBody.append(tRow);
-          if (fcast_conTd 
-          switch (expr) {
-           case 'Thunderstorm':
-           $(this).append("assets/images/if_flash-cloud.png");
-            break;
-            case 'clear':
-            $(this)
-          }
-          }
+          // if (fcast_conTd 
+          // switch (expr) {
+          //  case 'Thunderstorm':
+          //  $(this).append("assets/images/if_flash-cloud.png");
+          //   break;
+          //   case 'clear':
+          //   $(this)
+          // }
+          // }
           $("#table td:nth-child(5)").each(function () {
         if (parseInt($(this).text()) > 50) {
             $(this).parent("tr").css("background-color", "yellow");
