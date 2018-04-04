@@ -17,6 +17,11 @@ button {
     color: white;
 }
 
+#homeButtons {
+    color: white;
+    font-weight: bold;
+}
+
 a, td {
     color: white;
     font-weight: bold;

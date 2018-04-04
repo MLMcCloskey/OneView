@@ -38,7 +38,7 @@ $(document).ready(function() {
     // $("#weatherBtn").attr("disabled", true);
 
     $("#homeButtons").empty();
-    $("#homeButtons").prepend(homeBtn);
+    $("#homeButtons").prepend(homeBtn+"<br>");
 
     $.ajax({
       url: "http://api.wunderground.com/api/2c13cbda3d02efb1/forecast7day/geolookup/conditions/q/"+ Geo_lat + "," + Geo_lon +".json",
