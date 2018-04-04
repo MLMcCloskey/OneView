@@ -17,7 +17,7 @@ $(document).ready(function() {
       Geo_lat = position.coords.latitude;
       Geo_lon = position.coords.longitude;
       console.log(Geo_lat,Geo_lon);
-      $("#GetWeather").on("click", getData)
+      $("#weatherBtn").on("click", getData)
 
   // $("#GetWeather").attr("enabled", true);
   // //location tracking for local weather//
@@ -35,7 +35,11 @@ $(document).ready(function() {
   
   // Run getData function to make ajax call
   function getData() {
-    $("#GetWeather").attr("disabled", true);
+    // $("#weatherBtn").attr("disabled", true);
+
+    $("#homeButtons").empty();
+    $("#homeButtons").prepend(homeBtn);
+
     $.ajax({
       url: "http://api.wunderground.com/api/2c13cbda3d02efb1/forecast7day/geolookup/conditions/q/"+ Geo_lat + "," + Geo_lon +".json",
       dataType: "jsonp",
@@ -43,7 +47,11 @@ $(document).ready(function() {
         var location = parsed_json['current_observation']['observation_location']['city'];
         var loc_html = ("Location:  " + location)
         // Make location box visible
-        $("#GetLoc").append(loc_html).css("opacity", "1")
+        $("#homeButtons").append(loc_html).css("opacity", "1")
+
+        // create table head
+        $(".table").append("<thead><tr><th>Day</th><th>Temperature</th><th>Weather</th><th>Wind speed</th><th>Humidity</th></tr></thead>");
+
         // Get current weather and 3 day weather forecast
         for (i=0; i<=3; i++) {
           var fcast_day = parsed_json['forecast']['simpleforecast']['forecastday'][i]['date']['weekday_short'];
@@ -62,6 +70,7 @@ $(document).ready(function() {
           var fcast_conTd = $("<td>").text(fcast_con);
           var fcast_wndTd = $("<td>").text(fcast_wnd +" mph");
           var fcast_humTd = $("<td>").text(fcast_hum +"%");
+
           // Append the newly created table data to the table row
           tRow.append(fcast_dayTd, fcast_hiTd, fcast_conTd, fcast_wndTd, fcast_humTd);
           // Append the table row to the table body
