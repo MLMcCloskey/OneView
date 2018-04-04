@@ -17,7 +17,12 @@ button {
     color: white;
 }
 
-a {
+a, td {
     color: white;
     font-weight: bold;
+}
+
+th {
+    color: yellow;
+    font-weight: bolder;
 }
