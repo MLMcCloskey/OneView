@@ -33,3 +33,7 @@ th {
     color: yellow;
     font-weight: bolder;
 }
+
+#map {
+    height: 100%
+}

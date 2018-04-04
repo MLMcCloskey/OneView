@@ -10,6 +10,6 @@ $("#homeButtons").on("click", "#newsBtn", function(){
 
 $("#homeButtons").on("click", "#homeBtn", function(){
     $("#homeButtons").empty();
-    $(".table-responsive").empty();
+    $("tr").empty();
     $("#homeButtons").append('<button type="button" class="btn btn-warning" id="weatherBtn">Weather</button> <br> <button type="button" class="btn btn-primary" id="newsBtn">News</button> <br> <button type="button" class="btn btn-danger" id="financeBtn">Finance</button> <br> <button type="button" class="btn btn-success" id="musicBtn">Music</button>');   
 });

@@ -17,9 +17,9 @@ $(document).ready(function() {
       Geo_lat = position.coords.latitude;
       Geo_lon = position.coords.longitude;
       console.log(Geo_lat,Geo_lon);
-      $("#weatherBtn").on("click", getData)
+      $("#homeButtons").on("click", "#weatherBtn", getData)
 
-  // $("#GetWeather").attr("enabled", true);
+  // $("#weatherBtn").attr("enabled", true);
   // //location tracking for local weather//
   // if (google.loader.ClientLocation)
   // {
@@ -50,7 +50,7 @@ $(document).ready(function() {
         $("#homeButtons").append(loc_html).css("opacity", "1")
 
         // create table head
-        $(".table").append("<thead><tr><th>Day</th><th>Temperature</th><th>Weather</th><th>Wind speed</th><th>Humidity</th></tr></thead>");
+        $(".table").prepend("<thead><tr><th>Day</th><th>Temperature</th><th>Weather</th><th>Wind speed</th><th>Humidity</th></tr></thead>");
 
         // Get current weather and 3 day weather forecast
         for (i=0; i<=3; i++) {
