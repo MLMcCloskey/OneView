@@ -6,5 +6,17 @@ $("#homeButtons").on("click", "#financeBtn", function(){
 $("#homeButtons").on("click", "#stocksBtn", function(){
     $("#homeButtons").empty();
     $("#homeButtons").prepend(homeBtn);
-    $("#map").append('<iframe src="https://investingwidgets.com/leading-stocks?theme=darkTheme" width="80%" height="340" frameborder="0" allowtransparency="true" marginwidth="0" marginheight="0"></iframe><div class="poweredBy" style="font-family: Arial, Helvetica, sans-serif;">')                                   
+    $("#map").append('<iframe src="https://investingwidgets.com/leading-stocks?theme=darkTheme" width="80%" height="330" frameborder="0" allowtransparency="true" marginwidth="0" marginheight="0"></iframe><div class="poweredBy" style="font-family: Arial, Helvetica, sans-serif;">')                                   
+});
+
+$("#homeButtons").on("click", "#cryptoBtn", function(){
+    $("#homeButtons").empty();
+    $("#homeButtons").prepend(homeBtn);
+    $("#map").append('<iframe src="https://investingwidgets.com/top-cryptocurrencies?theme=darkTheme&cols=symbol,priceUsd,vol24,priceBtc,chg24,chg7" width="80%" height="330" frameborder="0" allowtransparency="true" marginwidth="0" marginheight="0"></iframe><div class="poweredBy" style="font-family: Arial, Helvetica, sans-serif;">')                                   
+});
+
+$("#homeButtons").on("click", "#financeNewsBtn", function(){
+    $("#homeButtons").empty();
+    $("#homeButtons").prepend(homeBtn);
+    $("#map").append('')                                   
 });
