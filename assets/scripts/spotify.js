@@ -69,7 +69,7 @@ $("#homeButtons").on("click", "#jazzBtn", function(){
 $("#homeButtons").on("click", "#electronicBtn", function(){
     $("#homeButtons").empty();
     $("#homeButtons").prepend(homeBtn);
-    $("#homeButtons").append('<button type="button" class="btn btn-success" id="electroswing">ELECTROSWING</button> <br> <button type="button" class="btn btn-primary" id="downtempo">DOWNTEMPO</button> <br> <button type="button" class="btn btn-danger" id="houseBtn">HOUSE</button>')
+    $("#homeButtons").append('<button type="button" class="btn btn-success" id="electroswing">ELECTROSWING</button> <br> <button type="button" class="btn btn-primary" id="downtempo">DOWNTEMPO</button> <br> <button type="button" class="btn btn-danger" id="studyBtn">STUDY</button>')
 });
 
 $("#homeButtons").on("click", "#rockBtn", function(){
@@ -86,19 +86,19 @@ $("#homeButtons").on("click", "#rockBtn", function(){
 $("#homeButtons").on("click", "#swingJazz", function(){
     $("#homeButtons").empty();
     $("#homeButtons").prepend(homeBtn + "<br>");
-    $("#homeButtons").append('');
+    $("#homeButtons").append('<iframe src="https://open.spotify.com/embed/user/laemualda.taberna/playlist/6YUF8qV4sfXBa5Ct3W4ghX" width="300" height="380" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>');
 });
 
 $("#homeButtons").on("click", "#coolJazz", function(){
     $("#homeButtons").empty();
     $("#homeButtons").prepend(homeBtn + "<br>");
-    $("#homeButtons").append('');
+    $("#homeButtons").append('<iframe src="https://open.spotify.com/embed/user/il_pelle/playlist/5K8NEGrH6nFT3ibvHWMXH4" width="300" height="380" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>');
 });
 
 $("#homeButtons").on("click", "#bebopBtn", function(){
     $("#homeButtons").empty();
     $("#homeButtons").prepend(homeBtn + "<br>");
-    $("#homeButtons").append('');
+    $("#homeButtons").append('<iframe src="https://open.spotify.com/embed/user/ra%25C3%25BAlmoreno/playlist/6WYJwb0GNfQxjEcRior31d" width="300" height="380" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>');
 });
 
 // electronic list
@@ -106,7 +106,7 @@ $("#homeButtons").on("click", "#bebopBtn", function(){
 $("#homeButtons").on("click", "#elctroswing", function(){
     $("#homeButtons").empty();
     $("#homeButtons").prepend(homeBtn + "<br>");
-    $("#homeButtons").append('');
+    $("#homeButtons").append('<iframe src="https://open.spotify.com/embed/user/foxolr/playlist/2FKWLIFub6K51sOmIfCseF" width="300" height="380" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>');
 });
 
 $("#homeButtons").on("click", "#downtempo", function(){
@@ -115,10 +115,10 @@ $("#homeButtons").on("click", "#downtempo", function(){
     $("#homeButtons").append('<iframe src="https://open.spotify.com/embed/user/1166247682/playlist/32NRcLNr9FYhVxGFYwxHuE" width="300" height="380" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>');
 });
 
-$("#homeButtons").on("click", "#houseBtn", function(){
+$("#homeButtons").on("click", "#studyBtn", function(){
     $("#homeButtons").empty();
     $("#homeButtons").prepend(homeBtn + "<br>");
-    $("#homeButtons").append('');
+    $("#homeButtons").append('<iframe src="https://open.spotify.com/embed/user/spotify/playlist/37i9dQZF1DWXLeA8Omikj7" width="300" height="380" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>');
 });
 
 // Rock list
@@ -143,3 +143,5 @@ $("#homeButtons").on("click", "#punkBtn", function(){
 });
 
 // spotify:user:1166247682:playlist:32NRcLNr9FYhVxGFYwxHuE
+
+//CHANGE THE SPOTIFY API TO STUDY PARTY SLEEP THEN CREATE GENRES BENEATH THEM

@@ -268,5 +268,4 @@ google.maps = google.maps || {};
 }).call(this, {});
 
 
-//CHANGE THE SPOTIFY API TO STUDY PARTY SLEEP THEN CREATE GENRES BENEATH THEM
 });
