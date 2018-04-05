@@ -22,6 +22,7 @@ button {
 #homeButtons {
     color: white;
     font-weight: bold;
+    /* max-width: 80%; */
 }
 
 a, td {
@@ -35,5 +36,7 @@ th {
 }
 
 #map {
-    height: 100%
+    max-width: 80%;
+    height: 50%;
+    margin: 0 auto;
 }
