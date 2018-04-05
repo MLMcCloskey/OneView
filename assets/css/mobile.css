@@ -30,7 +30,7 @@ button {
     /* max-width: 80%; */
 }
 
-a, td {
+a, td, #map {
     color: white;
     font-weight: bold;
 }
