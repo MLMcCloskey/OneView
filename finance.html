@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>Digital Currency Search</title>
+    <style type="text/css">
+        button,
+        div,
+        form,
+        input {
+            margin: 10px;
+        }
+    </style>
+</head>
+
+<body>
+
+<div class="container">
+    <h1>Currency Search</h1>
+
+    <!-- Currencies will Get Dumped Here -->
+    <div id="currency-view"></div>
+
+    <!-- Rendered Buttons will get Dumped Here  -->
+    <div id="buttons-view"></div>
+
+    <form id="currency-form">
+        <label for="currency-input">Search for Digital Currency</label>
+        <input type="text" id="currency-input">
+        <br>
+
+        <!-- Button triggers new currency to be added -->
+        <input id="add-currency" type="submit" value="Add Currency">
+    </form>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script type="text/javascript">
+        // Initial array of currencies
+        var currencies = ["BTC", "ETH", "LCC", "DASH"];
+
+        // displayCurrencyInfo function re-renders the HTML to display the appropriate content
+        function displayCurrencyInfo() {
+
+            var currency = $(this).attr("data-name");
+            var queryURL = "https://www.alphavantage.co/query?function=DIGITAL_CURRENCY_INTRADAY&symbol=" + currency + "&market=EUR&apikey=demo";
+
+            // Creating an AJAX call for the specific currency button being clicked
+            $.ajax({
+                url: queryURL,
+                method: "GET"
+            }).then(function(response) {
+
+                // Creating a div to hold the currency
+                var currencyDiv = $("<div class='currency'>");
+
+                //here????????????????????????????????????????????????????????
+                // Storing the price data
+                var price = response.price;
+
+                // Creating an element to have the price displayed
+                var pOne = $("<p>").text("Price: " + price);
+
+                // Displaying the price
+                currencyDiv.append(pOne);
+
+                // Storing the market cap
+                var marketCap = response.market_cap;
+
+                // Creating an element to hold the market cap
+                var pTwo = $("<p>").text("Market cap: " + market_cap);
+
+                // Displaying the market cap
+                currencyDiv.append(pTwo);
+
+                // Storing the volume
+                var volume = response.volume;
+
+                // Creating an element to hold the volume
+                var pThree = $("<p>").text("Volume: " + volume);
+
+                // Appending the volume
+                currencyDiv.append(pThree);
+                //here??????????????????????????????????????????????????????????????????????????????
+                // Putting the entire currency above the previous currencies
+                $("#currencies-view").append(currencyDiv);
+            });
+
+        };
+
+        // Function for displaying currency data
+        function renderButtons() {
+
+            // Deleting the currencies prior to adding new currencies
+            // (this is necessary otherwise you will have repeat buttons)
+            $("#buttons-view").empty();
+
+            // Looping through the array of currencies
+            for (var i = 0; i < currencies.length; i++) {
+
+                // Then dynamicaly generating buttons for each currency in the array
+                // This code $("<button>") is all jQuery needs to create the beginning and end tag. (<button></button>)
+                var a = $("<button>");
+                // Adding a class of currency-btn to our button
+                a.addClass("currency-btn");
+                // Adding a data-attribute
+                a.attr("data-name", currencies[i]);
+                // Providing the initial button text
+                a.text(currencies[i]);
+                // Adding the button to the buttons-view div
+                $("#buttons-view").append(a);
+            }
+        }
+
+        // This function handles events where a currency button is clicked
+        $("#add-currency").on("click", function(event) {
+            event.preventDefault();
+            // This line grabs the input from the text box
+            var currency = $("#currency-input").val().trim();
+
+            // Adding currency from the textbox to our array
+            currencies.push(currency);
+
+            // Calling renderButtons which handles the processing of our currency array
+            renderButtons();
+        });
+
+        // Adding a click event listener to all elements with a class of "currency-btn"
+        $(document).on("click", ".currency-btn", displayCurrencyInfo);
+
+        // Calling the renderButtons function to display the intial buttons
+        renderButtons();
+    </script>
+</div>
+</body>
+
+</html>
