@@ -3,6 +3,10 @@ body {
     background-image: url("https://marketplace.canva.com/MACV9soLIIc/1/thumbnail_large/canva-milky-way%2C-space%2C-universe%2C-night-sky%2C-background-MACV9soLIIc.jpg");
 }
 
+container{
+    height:100%;
+}
+
 button {
     width: 240px;
     height: 80px;
