@@ -103,7 +103,7 @@ $("#homeButtons").on("click", "#bebopBtn", function(){
 
 // electronic list
 
-$("#homeButtons").on("click", "#elctroswing", function(){
+$("#homeButtons").on("click", "#electroswing", function(){
     $("#homeButtons").empty();
     $("#homeButtons").prepend(homeBtn + "<br>");
     $("#homeButtons").append('<iframe src="https://open.spotify.com/embed/user/foxolr/playlist/2FKWLIFub6K51sOmIfCseF" width="300" height="320" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>');
