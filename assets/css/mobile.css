@@ -30,6 +30,10 @@ button {
     /* max-width: 80%; */
 }
 
+#homeBtn {
+    font-weight: 420;
+}
+
 a, td, #map {
     color: white;
     font-weight: bold;

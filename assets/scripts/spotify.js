@@ -86,19 +86,19 @@ $("#homeButtons").on("click", "#rockBtn", function(){
 $("#homeButtons").on("click", "#swingJazz", function(){
     $("#homeButtons").empty();
     $("#homeButtons").prepend(homeBtn + "<br>");
-    $("#homeButtons").append('<iframe src="https://open.spotify.com/embed/user/laemualda.taberna/playlist/6YUF8qV4sfXBa5Ct3W4ghX" width="300" height="380" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>');
+    $("#homeButtons").append('<iframe src="https://open.spotify.com/embed/user/laemualda.taberna/playlist/6YUF8qV4sfXBa5Ct3W4ghX" width="300" height="330" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>');
 });
 
 $("#homeButtons").on("click", "#coolJazz", function(){
     $("#homeButtons").empty();
     $("#homeButtons").prepend(homeBtn + "<br>");
-    $("#homeButtons").append('<iframe src="https://open.spotify.com/embed/user/il_pelle/playlist/5K8NEGrH6nFT3ibvHWMXH4" width="300" height="380" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>');
+    $("#homeButtons").append('<iframe src="https://open.spotify.com/embed/user/il_pelle/playlist/5K8NEGrH6nFT3ibvHWMXH4" width="300" height="330" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>');
 });
 
 $("#homeButtons").on("click", "#bebopBtn", function(){
     $("#homeButtons").empty();
     $("#homeButtons").prepend(homeBtn + "<br>");
-    $("#homeButtons").append('<iframe src="https://open.spotify.com/embed/user/ra%25C3%25BAlmoreno/playlist/6WYJwb0GNfQxjEcRior31d" width="300" height="380" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>');
+    $("#homeButtons").append('<iframe src="https://open.spotify.com/embed/user/ra%25C3%25BAlmoreno/playlist/6WYJwb0GNfQxjEcRior31d" width="300" height="330" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>');
 });
 
 // electronic list
@@ -106,19 +106,19 @@ $("#homeButtons").on("click", "#bebopBtn", function(){
 $("#homeButtons").on("click", "#elctroswing", function(){
     $("#homeButtons").empty();
     $("#homeButtons").prepend(homeBtn + "<br>");
-    $("#homeButtons").append('<iframe src="https://open.spotify.com/embed/user/foxolr/playlist/2FKWLIFub6K51sOmIfCseF" width="300" height="380" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>');
+    $("#homeButtons").append('<iframe src="https://open.spotify.com/embed/user/foxolr/playlist/2FKWLIFub6K51sOmIfCseF" width="300" height="330" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>');
 });
 
 $("#homeButtons").on("click", "#downtempo", function(){
     $("#homeButtons").empty();
     $("#homeButtons").prepend(homeBtn + "<br>");
-    $("#homeButtons").append('<iframe src="https://open.spotify.com/embed/user/1166247682/playlist/32NRcLNr9FYhVxGFYwxHuE" width="300" height="380" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>');
+    $("#homeButtons").append('<iframe src="https://open.spotify.com/embed/user/1166247682/playlist/32NRcLNr9FYhVxGFYwxHuE" width="300" height="330" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>');
 });
 
 $("#homeButtons").on("click", "#studyBtn", function(){
     $("#homeButtons").empty();
     $("#homeButtons").prepend(homeBtn + "<br>");
-    $("#homeButtons").append('<iframe src="https://open.spotify.com/embed/user/spotify/playlist/37i9dQZF1DWXLeA8Omikj7" width="300" height="380" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>');
+    $("#homeButtons").append('<iframe src="https://open.spotify.com/embed/user/spotify/playlist/37i9dQZF1DWXLeA8Omikj7" width="300" height="330" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>');
 });
 
 // Rock list
@@ -127,19 +127,19 @@ $("#homeButtons").on("click", "#studyBtn", function(){
 $("#homeButtons").on("click", "#indieBtn", function(){
     $("#homeButtons").empty();
     $("#homeButtons").prepend(homeBtn + "<br>");
-    $("#homeButtons").append('<iframe src="https://open.spotify.com/embed/user/spotify/playlist/37i9dQZF1DX2Nc3B70tvx0" width="300" height="380" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>');
+    $("#homeButtons").append('<iframe src="https://open.spotify.com/embed/user/spotify/playlist/37i9dQZF1DX2Nc3B70tvx0" width="300" height="330" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>');
 });
 
 $("#homeButtons").on("click", "#bluesBtn", function(){
     $("#homeButtons").empty();
     $("#homeButtons").prepend(homeBtn + "<br>");
-    $("#homeButtons").append('<iframe src="https://open.spotify.com/embed/user/spotify/playlist/37i9dQZF1DXcnkReojaCnV" width="300" height="380" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>');
+    $("#homeButtons").append('<iframe src="https://open.spotify.com/embed/user/spotify/playlist/37i9dQZF1DXcnkReojaCnV" width="300" height="330" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>');
 });
 
 $("#homeButtons").on("click", "#punkBtn", function(){
     $("#homeButtons").empty();
     $("#homeButtons").prepend(homeBtn + "<br>");
-    $("#homeButtons").append('<iframe src="https://open.spotify.com/embed/user/spotify/playlist/37i9dQZF1DX3LDIBRoaCDQ" width="300" height="380" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>');
+    $("#homeButtons").append('<iframe src="https://open.spotify.com/embed/user/spotify/playlist/37i9dQZF1DX3LDIBRoaCDQ" width="300" height="330" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>');
 });
 
 // spotify:user:1166247682:playlist:32NRcLNr9FYhVxGFYwxHuE
