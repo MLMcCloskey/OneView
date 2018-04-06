@@ -50,7 +50,7 @@ $(document).ready(function() {
         $("#homeButtons").append(loc_html).css("opacity", "1")
 
         // create table head
-        $(".table").prepend("<thead><tr><th>Day</th><th>Temperature</th><th>Weather</th><th>Wind speed</th><th>Humidity</th></tr></thead>");
+        $(".table").prepend("<thead><tr><th>Day</th><th>Temperature</th><th>Weather</th><th>Humidity</th></tr></thead>");
 
         // Get current weather and 3 day weather forecast
         for (i=0; i<=3; i++) {
@@ -72,7 +72,7 @@ $(document).ready(function() {
           var fcast_humTd = $("<td>").text(fcast_hum +"%");
 
           // Append the newly created table data to the table row
-          tRow.append(fcast_dayTd, fcast_hiTd, fcast_conTd, fcast_wndTd, fcast_humTd);
+          tRow.append(fcast_dayTd, fcast_hiTd, fcast_conTd, fcast_humTd);
           // Append the table row to the table body
           tBody.append(tRow);
           // if (fcast_conTd 
