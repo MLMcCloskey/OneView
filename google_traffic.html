@@ -4,22 +4,47 @@
     <meta name="viewport" content="initial-scale=1.0, user-scalable=no">
     <meta charset="utf-8">
     <title>Traffic layer</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <style>
       /* Always set the map height explicitly to define the size of the div
        * element that contains the map. */
       #map {
         height: 75%;
         width: 100%;
+        position: absolute;
+        bottom: 0;
+        /* left: 5%; */
       }
       /* Optional: Makes the sample page fill the window. */
       html, body {
         height: 100%;
         margin: 0;
         padding: 0;
+        background-image: url("https://marketplace.canva.com/MACV9soLIIc/1/thumbnail_large/canva-milky-way%2C-space%2C-universe%2C-night-sky%2C-background-MACV9soLIIc.jpg");
       }
+
+      button {
+        width: 240px;
+        height: 80px;
+        margin: 25px auto 0;
+        font-weight: 420;
+      }
+
+      a {
+        color: black;
+        font-weight: 420;
+      }
+
+      .btn {
+        font-size: 1.75em;
+      }
+
     </style>
   </head>
   <body>
+    <div id="home" class= "text-center">
+        <a href="mobile.html"><button type="button" class= "btn btn-warning">HOME</button></a>
+    </div>
     <div id="map"></div>
     <script>
       function initMap() {
