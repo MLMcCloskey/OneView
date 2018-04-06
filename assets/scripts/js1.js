@@ -4,7 +4,7 @@ var newBtn = '<br> <button type="button" class="btn btn-success"';
 
 $("#homeButtons").on("click", "#newsBtn", function(){
     $("#homeButtons").empty();
-    $("#homeButtons").append(homeBtn+'<button type="button" class="btn btn-success" id="techBtn">Technology</button> <br> <button type="button" class="btn btn-primary" id="usBtn">US News</button> <br> <button type="button" class="btn btn-danger" id="trafficBtn">Traffic</button>');
+    $("#homeButtons").append(homeBtn+'<button type="button" class="btn btn-success" id="techBtn">Technology</button> <br> <button type="button" class="btn btn-primary" id="usBtn">US News</button> <br> <a href="google_traffic.html"><button type="button" class="btn btn-danger" id="trafficBtn" ">Traffic</button></a>');
     // $("#buttons").show();
 });
 
