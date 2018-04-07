@@ -10,6 +10,7 @@
          
          What is this?
          It consolidates several sources of information in one app. Future development will include user login button. This way the user preferences will be saved.
+         https://mlmccloskey.github.io/OneView/mobile
          
          Project uses:
          News API
