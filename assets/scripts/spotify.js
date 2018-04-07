@@ -98,7 +98,7 @@ $("#homeButtons").on("click", "#coolJazz", function(){
 $("#homeButtons").on("click", "#bebopBtn", function(){
     $("#homeButtons").empty();
     $("#homeButtons").prepend(homeBtn + "<br>");
-    $("#homeButtons").append('<iframe src="https://open.spotify.com/embed/user/ra%25C3%25BAlmoreno/playlist/6WYJwb0GNfQxjEcRior31d" width="300" height="310" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>');
+    $("#homeButtons").append('<iframe src= "https://open.spotify.com/user/ra%C3%BAlmoreno/playlist/6WYJwb0GNfQxjEcRior31d?si=1k_BRF01RT6pJ5NreaF08Q"</iframe>');
 });
 
 // electronic list
