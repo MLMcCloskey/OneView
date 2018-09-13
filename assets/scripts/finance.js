@@ -6,13 +6,13 @@ $("#homeButtons").on("click", "#financeBtn", function () {
 $("#homeButtons").on("click", "#stocksBtn", function () {
     $("#homeButtons").empty();
     $("#homeButtons").prepend(homeBtn);
-    $("#map").append('<iframe src="https://investingwidgets.com/leading-stocks?theme=darkTheme" width="80%" height="330" frameborder="0" allowtransparency="true" marginwidth="0" marginheight="0"></iframe><div class="poweredBy" style="font-family: Arial, Helvetica, sans-serif;">')
+    $("#homeButtons").append('<br><iframe src="https://investingwidgets.com/leading-stocks?theme=darkTheme" width="80%" height="100%" frameborder="0" allowtransparency="true" marginwidth="0" marginheight="0"></iframe><div class="poweredBy" style="font-family: Arial, Helvetica, sans-serif;">')
 });
 
 $("#homeButtons").on("click", "#cryptoBtn", function () {
     $("#homeButtons").empty();
     $("#homeButtons").prepend(homeBtn);
-    $("#map").append('<iframe src="https://investingwidgets.com/top-cryptocurrencies?theme=darkTheme&cols=symbol,priceUsd,vol24,priceBtc,chg24,chg7" width="80%" height="330" frameborder="0" allowtransparency="true" marginwidth="0" marginheight="0"></iframe><div class="poweredBy" style="font-family: Arial, Helvetica, sans-serif;">')
+    $("#homeButtons").append('<br><iframe src="https://investingwidgets.com/top-cryptocurrencies?theme=darkTheme&cols=symbol,priceUsd,vol24,priceBtc,chg24,chg7" width="80%" height="100%" frameborder="0" allowtransparency="true" marginwidth="0" marginheight="0"></iframe><div class="poweredBy" style="font-family: Arial, Helvetica, sans-serif;">')
 });
 
 $("#homeButtons").on("click", "#financeNewsBtn", function () {
@@ -31,7 +31,7 @@ $("#homeButtons").on("click", "#financeNewsBtn", function () {
 
     for(i=0; i<5; i++){
         var links = $('<a>').attr('href', result.results[i].url).text(result.results[i].title);
-        $("#map").append(links).append('<hr>')
+        $("#homeButtons").append('<br>').append(links).append('<hr>')
     };
 
     });
